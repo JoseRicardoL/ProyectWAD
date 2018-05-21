@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/05/2018 06:19:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Employee" table="employee" catalog="proyecto" optimistic-lock="version">
+        <id name="sid" type="string">
+            <column name="sid" />
+            <generator class="assigned" />
+        </id>
+        <property name="pw" type="string">
+            <column name="pw" length="20" not-null="true" />
+        </property>
+        <property name="tipousuario" type="int">
+            <column name="tipousuario" not-null="true" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="45" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

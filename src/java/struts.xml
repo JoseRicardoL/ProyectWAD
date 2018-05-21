@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+    </package>
+    <package name="actionsupportpackage" extends="struts-default">
+        <action name="Employee" method="execute" class="actionsupportpackage.LoginActionSupport">
+            <result name="success" >administrator.jsp</result>
+            <result name="none" >usuario.jsp</result>
+            <result name="login" >profesor.jsp</result>
+            
+            <result name="input" >formLogin.jsp</result>
+        </action>
+        
+        <action name="Insertar" method="execute" class="actionsupportpackage.InsertActionSupport">
+        <result name="success" >output1.jsp</result>
+        </action>
+        <action name="delete" method="execute" class="actionsupportpackage.DeleteAction">
+            <result name="success" >Listaborrado.jsp</result>
+        </action>
+
+        <action name="deleteuser" method="execute" class="actionsupportpackage.DeleteUser">
+            <result name="success" >output2.jsp</result>
+        </action>  
+        <action name="actualizar" method="execute" class="actionsupportpackage.Update1">
+        <result name="success" >output3.jsp</result>
+        </action>
+        
+        <action name="menu" method="execute" class="actionsupportpackage.menu">
+            <result name="success" >administrator.jsp</result>
+        </action> 
+        
+               <action name="Update2" method="execute" class="actionsupportpackage.Update2">
+            <result name="success" >update.jsp</result>
+        </action>       
+        
+    </package>
+</struts>
