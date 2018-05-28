@@ -9,7 +9,7 @@
     <body>
         <s:iterator value="lista3"></s:iterator>
         <s:set var="myVar"><s:property value="sid"/></s:set>
-        
+
         <s:form action="actualizar">
             <s:property value="sid"/>
             <s:textfield name="sid" value="%{#myVar}" style="display:none;" />
@@ -21,7 +21,7 @@
             <s:submit value="Actualizar" />
             <s:actionmessage  />
         </s:form>
-        
+
     </body>
 </html>
 
